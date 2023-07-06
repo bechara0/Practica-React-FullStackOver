@@ -1,12 +1,14 @@
 import React from "react";
 
-export const Total = () => {
-  const exercises1 = 10;
-  const exercises2 = 7;
-  const exercises3 = 14;
+export const Total = (props) => {
   return (
     <div>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <p>
+        Number of exercises:{" "}
+        {props.course.parts[1].exercises +
+          props.course.parts[2].exercises +
+          props.course.parts[0].exercises}
+      </p>
     </div>
   );
 };
